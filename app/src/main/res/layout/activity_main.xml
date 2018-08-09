@@ -179,37 +179,100 @@
         android:background="@color/colorPrimary"
         app:layout_constraintLeft_toLeftOf="@id/tableHeader"
         app:layout_constraintRight_toRightOf="@id/tableHeader"
-        app:layout_constraintTop_toBottomOf="@id/tableHeader"/>
+        app:layout_constraintTop_toBottomOf="@id/tableHeader"
+        app:layout_constraintBottom_toBottomOf="@id/terminal"/>
 
     <TextView
         android:id="@+id/terminalLabel"
-        android:text="@string/terminal_label"
-        android:textSize="16sp"
-        app:layout_constraintLeft_toLeftOf="@id/tableHeader"
-        app:layout_constraintTop_toTopOf="@id/tableHeader"
-        app:layout_constraintBottom_toBottomOf="@id/tableHeader"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintRight_toLeftOf="@id/gateLabel"/>
+        android:text="@string/terminal_label"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@id/tableHeader"
+        app:layout_constraintLeft_toLeftOf="@id/tableHeader"
+        app:layout_constraintRight_toLeftOf="@id/gateLabel"
+        app:layout_constraintTop_toTopOf="@id/tableHeader" />
+
     <TextView
         android:id="@+id/gateLabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="16sp"
-        app:layout_constraintLeft_toRightOf="@id/terminalLabel"
         android:text="@string/gate_label"
-        app:layout_constraintTop_toTopOf="@id/tableHeader"
+        android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="@id/tableHeader"
-        app:layout_constraintRight_toLeftOf="@id/seatLabel"/>
+        app:layout_constraintLeft_toRightOf="@id/terminalLabel"
+        app:layout_constraintRight_toLeftOf="@id/seatLabel"
+        app:layout_constraintTop_toTopOf="@id/tableHeader" />
+
     <TextView
         android:id="@+id/seatLabel"
-        android:textSize="16sp"
-        android:text="@string/seat_label"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintLeft_toRightOf="@id/gateLabel"
+        android:text="@string/seat_label"
+        android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="@id/tableHeader"
-        app:layout_constraintTop_toTopOf="@id/tableHeader"
+        app:layout_constraintLeft_toRightOf="@id/gateLabel"
         app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tableHeader" />
+
+    <TextView
+        android:textColor="@color/colorWhite"
+        android:id="@+id/terminal"
+        app:layout_constraintLeft_toLeftOf="@+id/terminalLabel"
+        app:layout_constraintRight_toRightOf="@id/terminalLabel"
+        android:text="@string/terminal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="30sp"
+        app:layout_constraintTop_toTopOf="@id/tableContent"
+        app:layout_constraintBottom_toBottomOf="@id/tableContent"/>
+    <View
+        android:background="@color/colorPrimaryLight"
+        android:layout_width="1dp"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/tableHeader"
+        app:layout_constraintLeft_toRightOf="@id/terminalLabel"
+        app:layout_constraintRight_toLeftOf="@id/gateLabel"
+        app:layout_constraintBottom_toBottomOf="@id/tableContent"
         />
+    <View
+        android:layout_width="1dp"
+        android:layout_height="0dp"
+        android:background="@color/colorPrimaryLight"
+        app:layout_constraintLeft_toRightOf="@id/gateLabel"
+        app:layout_constraintRight_toLeftOf="@id/seatLabel"
+        app:layout_constraintTop_toBottomOf="@id/tableHeader"
+        app:layout_constraintBottom_toBottomOf="@id/tableContent"/>
+    <TextView
+        android:id="@+id/gate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="@id/gateLabel"
+        app:layout_constraintRight_toRightOf="@id/gateLabel"
+        app:layout_constraintTop_toTopOf="@id/tableContent"
+        app:layout_constraintBottom_toBottomOf="@id/tableContent"
+        android:textColor="@color/colorWhite"
+        android:textSize="30sp"
+        android:text="@string/gate"/>
+    <TextView
+        android:id="@+id/seat"
+        android:text="@string/seat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="30sp"
+        android:textColor="@color/colorWhite"
+        app:layout_constraintLeft_toLeftOf="@id/seatLabel"
+        app:layout_constraintRight_toRightOf="@id/seatLabel"
+        app:layout_constraintTop_toTopOf="@id/tableContent"
+        app:layout_constraintBottom_toBottomOf="@id/tableContent"/>
+    <ImageView
+        android:src="@drawable/ic_plane"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toRightOf="@id/leftRectangle"
+        app:layout_constraintRight_toLeftOf="@id/rightRectangle"
+        app:layout_constraintTop_toTopOf="@id/leftRectangle"
+        app:layout_constraintBottom_toTopOf="@id/divider"/>
+
+
 </android.support.constraint.ConstraintLayout>
